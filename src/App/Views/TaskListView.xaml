@@ -1,0 +1,24 @@
+<UserControl x:Class="ComplianceAssistant.Views.TaskListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             mc:Ignorable="d">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0 0 0 8">
+            <Button Content="新建任务" Width="120" Margin="0 0 8 0" Command="{Binding CreateTaskCommand}" />
+            <TextBlock Text="任务列表" FontWeight="Bold" VerticalAlignment="Center" />
+        </StackPanel>
+        <DataGrid ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="标题" Binding="{Binding Task.Title}" Width="*" />
+                <DataGridTextColumn Header="平台" Binding="{Binding Task.Platform.Name}" Width="150" />
+                <DataGridTextColumn Header="账号" Binding="{Binding Task.Account.DisplayName}" Width="150" />
+                <DataGridTextColumn Header="状态" Binding="{Binding Task.Status}" Width="150" />
+                <DataGridTextColumn Header="排期" Binding="{Binding Task.ScheduledAt}" Width="200" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>
