@@ -1,0 +1,10 @@
+{
+  "general": [
+    { "id": "manual_only", "title": "人工确认", "message": "禁止自动提交或群发", "severity": "High" },
+    { "id": "avoid_medical_claims", "title": "医疗健康边界", "message": "避免夸大疗效或诊断性表述", "severity": "Medium" }
+  ],
+  "keywords": {
+    "blacklist": ["治愈", "秒杀", "唯一"],
+    "whitelist": ["示例"]
+  }
+}

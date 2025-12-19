@@ -1,0 +1,13 @@
+<UserControl x:Class="ComplianceAssistant.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <StackPanel>
+        <TextBlock Text="设置与合规说明" FontWeight="Bold" />
+        <TextBlock Text="程序仅支持人工确认流程，不包含自动提交。账号凭证将使用 Windows DPAPI 加密存储。" TextWrapping="Wrap" />
+        <TextBlock Text="如需使用官方 API，需在对应插件中显式启用并提供合法凭证。" TextWrapping="Wrap" />
+        <TextBlock Text="配置与词库文件可在 Templates 与 Rules 文件夹中编辑或导入导出。" TextWrapping="Wrap" />
+    </StackPanel>
+</UserControl>

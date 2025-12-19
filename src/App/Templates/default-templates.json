@@ -1,0 +1,7 @@
+[
+  {
+    "name": "通用回答模板",
+    "content": "# {{title}}\n关键词：{{keywords}}\n背景：{{context}}\n---\n正文：",
+    "variables": "title,keywords,context"
+  }
+]
